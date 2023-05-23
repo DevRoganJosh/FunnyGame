@@ -5,6 +5,7 @@ using UnityEngine.Playables;
 public class SwordsManController : MonoBehaviour
 {
     public PlayableDirector Time;
+    public PlayableDirector Time2;
     public Animator anim;
     public float moveSpeed = 5f;
     public float jumpForce = 5f;
@@ -25,12 +26,12 @@ public class SwordsManController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.state == PlayState.Paused)
+        if (Time.state == PlayState.Paused && Time2.state == PlayState.Paused)
         {
             IsRunning();
         }
     }
-    void IsRunning()
+    public void IsRunning()
     {
         anim.SetBool("IsRunning", true);
         isGrounded = Physics2D.OverlapCircle(transform.position, 0.4f, LayerMask.GetMask("Ground"));
