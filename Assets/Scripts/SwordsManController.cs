@@ -14,7 +14,6 @@ public class SwordsManController : MonoBehaviour
     private int currentJumpCount = 0;
     private Rigidbody2D rb;
 
-    private bool isJumping = false;
     private bool isGrounded = false;
 
     void Start()
