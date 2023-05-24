@@ -17,6 +17,6 @@ public class OldScene : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        SceneManager.LoadScene("FinalScene");
+        SceneManager.LoadScene("OldScene");
     }
 }
